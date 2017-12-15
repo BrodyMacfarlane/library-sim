@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
+// COMP 54E
 import maroonLogo from '../assets/maroon-logo.svg'
 
 export default class Login extends Component {
     render() {
         return(
+            // COMP 54C
             <div className="component login-component">
                 <div className="main-container">
                     <div className="content-container">
+                        {/* COMP 54G */}
                         <img className="maroon-logo" src={maroonLogo}/>
                         <div className="login-title">BOOK EXCHANGE</div>
                         <div id="credentials-container">
@@ -20,6 +23,7 @@ export default class Login extends Component {
                             </div>
                             <div className="credentials-btn">
                                 <button>REGISTER</button>
+                                {/* COMP 54H */}
                                 <a href="/#/browse">
                                     <button>LOGIN</button>
                                 </a>
