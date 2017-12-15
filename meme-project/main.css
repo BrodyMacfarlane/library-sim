@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Runescape';
+    src: url('fonts/RuneScape Chat.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alien Dash';
+    src: url('fonts/Alien Dash.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alien Solid';
+    src: url('fonts/Alien Solid.ttf') format('truetype');
+}
+
+/* COMP 23F */
+body {
+    text-align: center;
+    background-image: url('./sunset.jpg');
+    background-size: cover;
+    font-family: 'Runescape';
+    padding: 40px 20px 40px 20px;
+}
+
+.head {
+    font-family: 'Alien Dash';
+    font-size: 48px;
+    color: #FFF;
+    text-decoration: underline;
+}

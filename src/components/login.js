@@ -10,6 +10,7 @@ export default class Login extends Component {
                 <div className="main-container">
                     <div className="content-container">
                         {/* COMP 54G */}
+                        {/* COMP 54J */}
                         <img className="maroon-logo" src={maroonLogo}/>
                         <div className="login-title">BOOK EXCHANGE</div>
                         <div id="credentials-container">
