@@ -20,11 +20,58 @@ body {
     background-size: cover;
     font-family: 'Runescape';
     padding: 40px 20px 40px 20px;
+    color: #FFF;
+}
+
+div {
+    color: #FFF;
 }
 
 .head {
     font-family: 'Alien Dash';
     font-size: 48px;
-    color: #FFF;
     text-decoration: underline;
+}
+
+/* COMP 22C-3 */
+.direct-demo-outer > div {
+    color: yellow;
+    font-size: 64px;
+}
+
+.gf {
+    position: absolute;
+    left: -30px;
+    top: 300px;
+    transform: rotate(-45deg);
+}
+
+/* COMP 25D */
+.plus-demo {
+    position: relative;
+    top: 380px;
+    width: 500px;
+    float: right;
+}
+
+/* COMP 22C-5 */
+/* COMP 24F */
+.plus-demo div+p {
+    border: 3px solid #FFF;
+    box-sizing: border-box;
+}
+
+.rick {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.2;
+    width: 100%;
+}
+
+.doc {
+    position: absolute;
+    bottom: 0;
+    color: yellow;
 }
