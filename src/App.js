@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* COMP 42D */}
         <HashRouter>
           <div>
             <Route path='/' component={Login} exact />
