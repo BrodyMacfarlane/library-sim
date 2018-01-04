@@ -1,5 +1,7 @@
 // COMP 37E-1
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 import Compception from './compception'
 
 // COMP 37E-2
@@ -9,16 +11,38 @@ export default class Browse extends Component {
         super();
         // COMP 36C
         this.state = {
-            myName: "Brody"
+            myName: "Brody",
+            myGreeting: "Please type in a greeting into the input above and press send",
+            inputText: ""
         }
         // COMP 37C
         this.changeState = this.changeState.bind(this)
+        this.handleGreet = this.handleGreet.bind(this)
+        this.updateInputValue = this.updateInputValue.bind(this)
+    }
+    // COMP 44E
+    componentDidMount(){
+        console.log("component has loaded/mounted")
     }
     // COMP 37D
     changeState = () => {
         // COMP 36D
         this.setState({
             myName: "Mason"
+        })
+    }
+    handleGreet(){
+        // COMP 44C
+        axios.post('http://localhost:9001/api/getGreeting', 
+            {text: this.state.inputText})
+            // COMP 44D
+            .then((response) => {
+            this.setState({myGreeting: response.data})
+        })
+    }
+    updateInputValue(e){
+        this.setState({
+            inputText: e.target.value
         })
     }
     // COMP 36F
@@ -40,6 +64,12 @@ export default class Browse extends Component {
                 <button onClick={this.changeState}>CLICK ME TO CHANGE NAME ON STATE FROM BRODY TO MASON</button>
                 {/* COMP 36H & COMP 38D */}
                 <Compception myProps={"Da props"}/>
+                {/* COMP 42E */}
+                <Link to="/">Login/Register</Link>
+                <div>
+                    <input type="text" name="greeting" value={this.state.inputText} onChange={e => this.updateInputValue(e)}/><button type="submit" onClick={this.handleGreet}>SEND</button>
+                </div>
+                <div>{this.state.myGreeting}</div>
             </div>
         )
     }
